@@ -17,8 +17,8 @@ var scoreNum = document.querySelector('.scoreNum')
 function renderMap(x,y){
 	MapSizeX = x
 	MapSizeY = y
-	mapDiv.style.height = MapSizeY*30+'px'
-	mapDiv.style.width = MapSizeX*30+'px'
+	mapDiv.style.height = MapSizeY*25+'px'
+	mapDiv.style.width = MapSizeX*25+'px'
 	for(var i=0;i<y;i++){
 		for(var j=0;j<x;j++){
 			var newDiv = document.createElement('div')
@@ -149,7 +149,7 @@ function gaming(){
 
 
 //渲染页面
-renderMap(20,20) 
+renderMap(30,20) 
 //点击开始
 startBtn.onclick = function(){
 	//蛇的创建和渲染
