@@ -1,0 +1,104 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+html,body{
+	width: 100%;
+	height: 100%;
+}
+body{
+	background: #333;
+}
+.pc .header{
+	height: 50px;
+	width: 100%;
+	position: relative;
+	background: #efefef;
+}
+.pc .score{
+	height:30px;
+	width: auto;
+	margin: 10px;
+	left:0;
+	font-size: 18px;
+	text-align: center;
+	line-height: 30px;
+	color: #333;
+	position: absolute;
+}
+.pc .scoreNum{
+	font-size: 20px;
+	color: deepskyblue;
+}
+.pc .startGame{
+	position: absolute;
+	right: 0;
+	margin: 5px;
+	height: 40px;
+	width: 80px;
+	background: #333;
+	color: #efefef;
+	font-size: 15px;
+	border: null;
+	border-radius: 10px;
+}
+.pc .pause{
+	position: absolute;
+	right: 90px;
+	margin: 5px;
+	height: 40px;
+	width: 80px;
+	background: #333;
+	color: #efefef;
+	font-size: 15px;
+	border: null;
+	border-radius: 10px;
+}
+.pc .reload{
+	position: absolute;
+	right: 180px;
+	margin: 5px;
+	height: 40px;
+	width: 80px;
+	background: #333;
+	color: #efefef;
+	font-size: 15px;
+	border: null;
+	border-radius: 10px;	
+}
+.pc .map{
+	border-right:1px solid rgba(255,255,255,0.2);
+	border-bottom:1px solid rgba(255,255,255,0.2);
+	margin: 40px auto;
+	display: flex;
+	flex-wrap: wrap;
+	box-sizing: content-box;
+}
+.pc .mapItem{
+	width: 30px;
+	height: 30px;
+	border-left: 1px solid rgba(255,255,255,0.2);
+	border-top: 1px solid rgba(255,255,255,0.2);
+}
+.pc .mapItem.snake{
+	background: #fff;
+	border-left: 1px solid rgba(0,0,0,0.4);
+	border-top: 1px solid rgba(0,0,0,0.4);
+}
+.pc .mapItem.food{
+	background: yellow;
+	animation: food 1.5s ease infinite;
+	box-shadow: 0 0 15px #ffffcc;
+}
+@keyframes food{
+	from{
+		transform:scale(0.7) rotate3d(1,1,1,0deg);
+	}
+	to{
+		transform:scale(0.7) rotate3d(1,1,1,360deg);
+	}
+}
+.pc .mapItem.food[data-food=redStar]{
+	background: deeppink;
+}
