@@ -143,7 +143,7 @@ function gaming(){
 			
 		}
 		renderSnake()
-	},150)
+	},100)
 }
 
 
